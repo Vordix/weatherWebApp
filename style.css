@@ -1,0 +1,94 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(backgroundImage.png);
+    /* tint it a bit darker */
+    
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-size: cover;
+  
+}
+.wetterBox {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 0px;
+    
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* on hover */
+.wetterBox:hover {
+    background: rgba(255, 255, 255, 0.37);
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(3px);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#grossesHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#kleinesHeader {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: end;
+}
+#andereEigenschaften {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px;
+}
+.alata-regular {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: "Alata", sans-serif;
+    color: #ffffff;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h1{
+    font-size: 4.5em;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+h4{
+    
+}
+h5{
+margin-right: 5px;
+}
