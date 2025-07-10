@@ -30,6 +30,7 @@ function makeWeatherApp(){
         document.getElementById("stadtAnzeige").innerHTML = data.name;
         document.getElementById("minDegrees").innerHTML = `zwischen ${Math.round(data.main.temp_min)}°C`;
         document.getElementById("maxDegrees").innerHTML = `und ${Math.round(data.main.temp_max)}°C`;
+        
         document.getElementById("bewoelkungBeschreibung").innerHTML = `${data.weather[0].description}`;
         let sunrise_timestamp = data.sys.sunrise; // Unix timestamp for sunrise
         let sunset_timestamp = data.sys.sunset; // Unix timestamp for sunset
