@@ -1,13 +1,14 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background-image: url(backgroundImage.png);
     /* tint it a bit darker */
     
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.2);
     background-size: cover;
+
+    font-family: "Alata", sans-serif;
   
 }
 .wetterBox {
@@ -39,6 +40,65 @@ html, body {
 /*wenn wetterbox nicht mehr gehovert wird*/
 .wetterBox:not(:hover) {
     transition: ease-out 0.3s;
+}
+#stadtEingabe {
+    width: 20dvw;
+    font-family: "Alata", sans-serif;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#sucheButton {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+#sucheButton:hover {
+    transition: ease 0.3s;
+    background: rgba(99, 168, 189, 0.6);
+    animation-name: bounce;
+    font-family: "Alata", sans-serif;
+    color: #ffffff;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border: dashed 2px rgba(255, 255, 255, 0.8);
+
+
+}
+
+@keyframes bounce{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#EingabeBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 }
 
 
