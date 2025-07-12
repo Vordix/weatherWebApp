@@ -1,5 +1,12 @@
 html, body {
     margin: 0;
+
+    max-width: 100dvw;
+    max-height: 100dvh;
+    overflow: hidden;
+
+
+
     padding: 0;
     background-image: url(backgroundImage.png);
     /* tint it a bit darker */
@@ -9,7 +16,6 @@ html, body {
     background-size: cover;
 
     font-family: "Alata", sans-serif;
-  
 }
 .wetterBox {
     width: auto;
@@ -18,12 +24,17 @@ html, body {
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    margin: 5px;
+    margin: 10px;
     padding: 0px;
     
     background: rgba(255, 255, 255, 0.27);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    /*top shadow glow*/
+    box-shadow: 0 6px 40px #ffffff33;
+
+    /* backdrop filter for blur effect */
     backdrop-filter: blur(4.3px);
     -webkit-backdrop-filter: blur(4.5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -63,20 +74,19 @@ html, body {
     padding: 5px;
     margin: 5px;
     font-size: 1em;
+    font-family: "Alata", sans-serif;
+    color: #000000;
     background: rgba(255, 255, 255, 0.8);
     cursor: pointer;
 }
 
 #sucheButton:hover {
     transition: ease 0.3s;
-    background: rgba(99, 168, 189, 0.6);
     animation-name: bounce;
     font-family: "Alata", sans-serif;
-    color: #ffffff;
+    color: #000000;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    border: dashed 2px rgba(255, 255, 255, 0.8);
-
 
 }
 
@@ -85,7 +95,7 @@ html, body {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     100% {
         transform: scale(1);
@@ -96,9 +106,11 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    
+    max-width: 50dvw;
     height: 100%;
     padding: 10px;
+    margin: 0 auto;
 }
 
 
@@ -106,22 +118,20 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.27);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.3px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #kleinesHeader {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column-reverse;
     align-items: end;
+    
 }
 #andereEigenschaften {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    margin : 0px;
 }
 .alata-regular {
   font-family: "Alata", sans-serif;
@@ -135,6 +145,8 @@ h1, h2, h3, h4, h5 {
     color: #ffffff;
     font-weight: 400;
     font-style: normal;
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -158,4 +170,8 @@ h4{
 }
 h5{
 margin-right: 5px;
+}
+
+#divMinMax, #divWolken, #divSonneAufAb {
+    width : 30dvw;
 }
