@@ -38,6 +38,9 @@ html, body {
     backdrop-filter: blur(4.3px);
     -webkit-backdrop-filter: blur(4.5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #ffffff;
+    border-bottom-color: rgba(0, 0, 0, 0.6);
+    border-bottom-width: 2px;
 }
 /* on hover */
 .wetterBox:hover {
@@ -174,4 +177,8 @@ margin-right: 5px;
 
 #divMinMax, #divWolken, #divSonneAufAb {
     width : 30dvw;
+}
+
+.menuObject {
+
 }
