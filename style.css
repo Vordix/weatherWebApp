@@ -5,15 +5,13 @@ html, body {
     max-height: 100dvh;
     overflow: hidden;
 
-
-
     padding: 0;
     background-image: url(backgroundImage.png);
     /* tint it a bit darker */
     
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.2);
-    background-size: cover;
+    background-size: auto;
 
     font-family: "Alata", sans-serif;
 }
@@ -22,7 +20,7 @@ html, body {
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     border-radius: 10px;
     margin: 10px;
     padding: 0px;
@@ -35,8 +33,7 @@ html, body {
     box-shadow: 0 6px 40px #ffffff33;
 
     /* backdrop filter for blur effect */
-    backdrop-filter: blur(4.3px);
-    -webkit-backdrop-filter: blur(4.5px);
+    backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-top-color: #ffffff;
     border-bottom-color: rgba(0, 0, 0, 0.6);
@@ -46,7 +43,7 @@ html, body {
 .wetterBox:hover {
     background: rgba(255, 255, 255, 0.37);
     box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
-    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(4.5px);
     transition: ease 0.3s;
     filter: contrast(1.1);
     transform: scale(1.01);
