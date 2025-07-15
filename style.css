@@ -38,15 +38,20 @@ html, body {
     border-top-color: #ffffff;
     border-bottom-color: rgba(0, 0, 0, 0.6);
     border-bottom-width: 2px;
+
+    font-family: "Alata", sans-serif;
 }
 /* on hover */
-.wetterBox:hover {
+.wetterBox:hover{
     background: rgba(255, 255, 255, 0.37);
     box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4.5px);
     transition: ease 0.3s;
     filter: contrast(1.1);
     transform: scale(1.01);
+    transform: rotate3d(30, 0, 0, 30deg);
+    border-bottom-width: 4px;
+    box-shadow: #000000;
 }
 /*wenn wetterbox nicht mehr gehovert wird*/
 .wetterBox:not(:hover) {
@@ -121,10 +126,12 @@ html, body {
 }
 #kleinesHeader {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: end;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
     
 }
+
 #andereEigenschaften {
     display: flex;
     flex-wrap: wrap;
@@ -139,6 +146,19 @@ html, body {
   font-style: normal;
 }
 
+#wolke{
+    font-size: larger;
+    margin-right: 5px;
+}
+#wolke:hover{
+    transition:ease-in 0.3s;
+    color: rgb(220, 255, 23);
+    transform: scale(1.2);
+}
+#wolke:not(:hover){
+    transition: ease-out 0.3s;
+    color:#ffffff;
+}
 
 h1, h2, h3, h4, h5 {
     font-family: "Alata", sans-serif;
@@ -174,8 +194,12 @@ margin-right: 5px;
 
 #divMinMax, #divWolken, #divSonneAufAb {
     width : 30dvw;
+    align-items: center;
 }
 
 .menuObject {
-
+    color: #ffffff;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom: 1px solid #ffffff;
 }
